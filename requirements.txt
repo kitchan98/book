@@ -1,0 +1,5 @@
+mcp[cli]
+fastapi
+uvicorn
+pydantic-ai-slim[mcp]
+flask>=2.3.0

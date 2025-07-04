@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Advisor - AI Wisdom from Great Books</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Book Advisor</h1>
+            <p class="subtitle">Get wisdom from Steve Jobs, Daniel Kahneman, and other great thinkers</p>
+        </header>
+
+        <div class="chat-container">
+            <div id="chat-messages" class="chat-messages">
+                <div class="welcome-message">
+                    <h2>Welcome! Ask me anything.</h2>
+                    <p>I can provide advice based on insights from:</p>
+                    <ul>
+                        <li><strong>Steve Jobs</strong> - Leadership, innovation, and life decisions</li>
+                        <li><strong>Daniel Kahneman</strong> - Decision-making and thinking strategies</li>
+                        <li><strong>The Innovators</strong> - Lessons from history's greatest innovators</li>
+                        <li><strong>Sapiens</strong> - Understanding human nature and society</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <div class="example-questions">
+                    <button class="example-btn" onclick="askExample()">Show example questions</button>
+                    <button class="clear-btn" onclick="clearChat()">Clear chat</button>
+                </div>
+                <form id="chat-form" class="chat-form">
+                    <input 
+                        type="text" 
+                        id="message-input" 
+                        class="message-input" 
+                        placeholder="Ask a question... (e.g., 'What would Steve Jobs do?')"
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="submit" class="send-btn">Send</button>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <p>Powered by Model Context Protocol (MCP) and biographical insights</p>
+        </footer>
+    </div>
+
+    <!-- Example Questions Modal -->
+    <div id="examples-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Example Questions</h2>
+            <div id="examples-list" class="examples-list"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
